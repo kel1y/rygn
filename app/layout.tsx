@@ -9,7 +9,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'RYGN - Rwandan Youth Generation in Nuclear',
   description: 'Empowering youth to build a clean, safe and sustainable tomorrow through nuclear science and technology',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
