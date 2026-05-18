@@ -1,42 +1,42 @@
-import Link from 'next/link';
 import { TeamMemberCard } from './team-member-card';
 
 export function LeadershipGrid() {
   const leaders = [
     {
-      name: 'Bruce Francois Riyago',
-      title: 'Founder/Chairperson',
-      image: '/images/team-1.jpg',
-      linkedin: '#',
-      twitter: '#',
+      name: 'Francois Regis Hirwa',
+      title: 'President',
+      image: '/images/regis.png',
+      linkedin: 'https://www.linkedin.com/in/francois-regis-hirwa/',
     },
     {
-      name: 'Ursela Angel Frenakwako',
-      title: 'Vice Chairperson',
-      image: '/images/team-2.jpg',
-      linkedin: '#',
-      twitter: '#',
+      name: 'Uwase Ange Fravienne',
+      title: 'Vice President',
+      image: '/images/ange.jpeg',
+      linkedin: 'https://rw.linkedin.com/in/uwase-ange-fravienne-22917338b',
     },
     {
-      name: 'Julius Jambo',
-      title: 'Secretary General',
-      image: '/images/team-3.jpg',
-      linkedin: '#',
-      twitter: '#',
+      name: 'Abraham Rutunda',
+      title: 'General Secretary',
+      image: '/images/rutunda.jpg',
+      linkedin: 'https://www.linkedin.com/in/abraham-rutunda-b32342253/',
     },
     {
-      name: 'Muhammad Chantell',
-      title: 'Communication Lead',
-      image: '/images/team-4.jpg',
-      linkedin: '#',
-      twitter: '#',
+      name: 'Manzi Clement',
+      title: 'Senior Treasurer',
+      image: '/images/clement.jpg',
+      linkedin: 'https://www.linkedin.com/in/manzi-clement/',
+    },
+    {
+      name: 'Dr Christian Kwisanga',
+      title: 'Advisor',
+      image: '/images/christian.jpg',
+      linkedin: 'https://www.linkedin.com/in/chris-kwisanga-51604a187/',
     },
   ];
 
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a52] mb-2">
             OUR LEADERSHIP
@@ -46,28 +46,16 @@ export function LeadershipGrid() {
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {leaders.map((leader, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          {leaders.map((leader) => (
             <TeamMemberCard
-              key={index}
+              key={leader.linkedin}
               name={leader.name}
               title={leader.title}
               image={leader.image}
               linkedin={leader.linkedin}
-              twitter={leader.twitter}
             />
           ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center">
-          <Link
-            href="#"
-            className="bg-[#1a3a52] text-white px-8 py-3 rounded-lg hover:bg-[#0f2847] transition-colors font-semibold inline-block"
-          >
-            Meet the Entire Team
-          </Link>
         </div>
       </div>
     </section>
