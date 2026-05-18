@@ -14,20 +14,21 @@ export function PhotoGrid() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
           {photos.map((photo) => (
             <div
               key={photo.image}
-              className="relative aspect-[4/3] min-h-[220px] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
+              className="mb-6 break-inside-avoid rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-50"
             >
               <Image
                 src={photo.image}
                 alt={photo.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                width={0}
+                height={0}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={100}
+                className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
             </div>
           ))}
         </div>
