@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { LinkedinIcon, TwitterIcon, InstagramIcon, MessageCircle } from 'lucide-react';
+import { contact, socialLinks } from '@/lib/site-links';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -77,13 +78,13 @@ export function Footer() {
             <h3 className="font-bold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
-                <a href="mailto:rivanden.gp@gmail.com" className="hover:text-white transition-colors">
-                  rivanden.gp@gmail.com
+                <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">
+                  {contact.email}
                 </a>
               </li>
               <li>
-                <a href="tel:+250784588388" className="hover:text-white transition-colors">
-                  +250 784 588 388
+                <a href={`tel:${contact.phone}`} className="hover:text-white transition-colors">
+                  {contact.phoneDisplay}
                 </a>
               </li>
               <li>
@@ -97,7 +98,7 @@ export function Footer() {
             <h3 className="font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -106,16 +107,16 @@ export function Footer() {
                 <LinkedinIcon className="w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com"
+                href={socialLinks.x}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
-                aria-label="Twitter"
+                aria-label="X"
               >
                 <TwitterIcon className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com"
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -124,7 +125,7 @@ export function Footer() {
                 <InstagramIcon className="w-6 h-6" />
               </a>
               <a
-                href="https://whatsapp.com"
+                href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"

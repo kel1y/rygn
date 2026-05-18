@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { LinkedinIcon, TwitterIcon, InstagramIcon, MessageCircle } from 'lucide-react';
+import { socialLinks } from '@/lib/site-links';
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
@@ -63,7 +64,7 @@ export function NewsletterSection() {
 
             <div className="flex gap-6">
               <a
-                href="https://linkedin.com"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#2d9c4a] transition-colors group"
@@ -72,16 +73,16 @@ export function NewsletterSection() {
                 <span className="font-semibold hidden sm:inline">LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com"
+                href={socialLinks.x}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#2d9c4a] transition-colors group"
               >
                 <TwitterIcon className="w-10 h-10 p-2 border-2 border-gray-300 rounded-lg group-hover:border-[#2d9c4a] group-hover:bg-[#2d9c4a] group-hover:text-white transition-all" />
-                <span className="font-semibold hidden sm:inline">Twitter</span>
+                <span className="font-semibold hidden sm:inline">X</span>
               </a>
               <a
-                href="https://instagram.com"
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#2d9c4a] transition-colors group"
@@ -90,7 +91,7 @@ export function NewsletterSection() {
                 <span className="font-semibold hidden sm:inline">Instagram</span>
               </a>
               <a
-                href="https://whatsapp.com"
+                href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#2d9c4a] transition-colors group"
