@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CheckCircle } from 'lucide-react';
+import { submitToFormspree } from '@/lib/formspree';
 
 export function InvolvementForm() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,8 @@ export function InvolvementForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const interestOptions = [
     'Join our network',
@@ -37,19 +40,38 @@ export function InvolvementForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
+    setIsSubmitting(true);
+
+    const result = await submitToFormspree('Get Involved', {
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone || 'Not provided',
+      interestAreas:
+        formData.interestAreas.length > 0
+          ? formData.interestAreas.join(', ')
+          : 'None selected',
+      message: formData.message || 'No message',
+    });
+
+    setIsSubmitting(false);
+
+    if (!result.ok) {
+      setError(result.error);
+      return;
+    }
+
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        interestAreas: [],
-        message: '',
-      });
-    }, 3000);
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      interestAreas: [],
+      message: '',
+    });
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
@@ -73,8 +95,13 @@ export function InvolvementForm() {
             </div>
           )}
 
+          {error && (
+            <div className="mb-8 p-4 bg-red-50 border border-red-300 rounded-lg">
+              <p className="text-red-800 text-sm">{error}</p>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Full Name */}
             <div>
               <label className="block text-sm font-semibold text-[#1a3a52] mb-2">
                 Full Name *
@@ -85,12 +112,12 @@ export function InvolvementForm() {
                 value={formData.fullName}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a]"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a] disabled:opacity-60"
                 placeholder="Your full name"
               />
             </div>
 
-            {/* Email */}
             <div>
               <label className="block text-sm font-semibold text-[#1a3a52] mb-2">
                 Email *
@@ -101,12 +128,12 @@ export function InvolvementForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a]"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a] disabled:opacity-60"
                 placeholder="your@email.com"
               />
             </div>
 
-            {/* Phone */}
             <div>
               <label className="block text-sm font-semibold text-[#1a3a52] mb-2">
                 Phone Number
@@ -116,12 +143,12 @@ export function InvolvementForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a]"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a] disabled:opacity-60"
                 placeholder="+250 123 456 789"
               />
             </div>
 
-            {/* Interest Areas */}
             <div>
               <label className="block text-sm font-semibold text-[#1a3a52] mb-3">
                 Areas of Interest
@@ -134,7 +161,8 @@ export function InvolvementForm() {
                       id={option}
                       checked={formData.interestAreas.includes(option)}
                       onChange={() => handleCheckboxChange(option)}
-                      className="w-4 h-4 text-[#2d9c4a] border-gray-300 rounded focus:ring-[#2d9c4a]"
+                      disabled={isSubmitting}
+                      className="w-4 h-4 text-[#2d9c4a] border-gray-300 rounded focus:ring-[#2d9c4a] disabled:opacity-60"
                     />
                     <label htmlFor={option} className="ml-3 text-gray-700 cursor-pointer">
                       {option}
@@ -144,7 +172,6 @@ export function InvolvementForm() {
               </div>
             </div>
 
-            {/* Message */}
             <div>
               <label className="block text-sm font-semibold text-[#1a3a52] mb-2">
                 Message (Optional)
@@ -154,17 +181,18 @@ export function InvolvementForm() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a]"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a] disabled:opacity-60"
                 placeholder="Tell us about your interests and goals..."
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#2d9c4a] text-white px-6 py-3 rounded-lg hover:bg-[#239a41] transition-colors font-semibold"
+              disabled={isSubmitting}
+              className="w-full bg-[#2d9c4a] text-white px-6 py-3 rounded-lg hover:bg-[#239a41] transition-colors font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Submit
+              {isSubmitting ? 'Sending...' : 'Submit'}
             </button>
           </form>
         </div>

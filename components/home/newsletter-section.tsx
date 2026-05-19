@@ -9,18 +9,33 @@ import {
   Youtube,
 } from 'lucide-react';
 import { socialLinks } from '@/lib/site-links';
+import { submitToFormspree } from '@/lib/formspree';
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail('');
-      setTimeout(() => setSubmitted(false), 3000);
+    if (!email) return;
+
+    setError(null);
+    setIsSubmitting(true);
+
+    const result = await submitToFormspree('Newsletter', { email });
+
+    setIsSubmitting(false);
+
+    if (!result.ok) {
+      setError(result.error);
+      return;
     }
+
+    setSubmitted(true);
+    setEmail('');
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
@@ -43,18 +58,23 @@ export function NewsletterSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a]"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2d9c4a] disabled:opacity-60"
               />
               <button
                 type="submit"
-                className="w-full bg-[#2d9c4a] text-white px-6 py-3 rounded-lg hover:bg-[#239a41] transition-colors font-semibold"
+                disabled={isSubmitting}
+                className="w-full bg-[#2d9c4a] text-white px-6 py-3 rounded-lg hover:bg-[#239a41] transition-colors font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </button>
               {submitted && (
                 <p className="text-green-600 font-semibold">
                   Thank you for subscribing!
                 </p>
+              )}
+              {error && (
+                <p className="text-red-600 text-sm font-medium">{error}</p>
               )}
             </form>
           </div>
