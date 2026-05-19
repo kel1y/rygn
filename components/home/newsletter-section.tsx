@@ -1,7 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { LinkedinIcon, TwitterIcon, InstagramIcon, MessageCircle } from 'lucide-react';
+import {
+  LinkedinIcon,
+  TwitterIcon,
+  InstagramIcon,
+  MessageCircle,
+  Youtube,
+} from 'lucide-react';
 import { socialLinks } from '@/lib/site-links';
 
 export function NewsletterSection() {
@@ -62,7 +68,7 @@ export function NewsletterSection() {
               Connect with us on social media for latest updates.
             </p>
 
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4 sm:gap-6">
               <a
                 href={socialLinks.linkedin}
                 target="_blank"
@@ -98,6 +104,15 @@ export function NewsletterSection() {
               >
                 <MessageCircle className="w-10 h-10 p-2 border-2 border-gray-300 rounded-lg group-hover:border-[#2d9c4a] group-hover:bg-[#2d9c4a] group-hover:text-white transition-all" />
                 <span className="font-semibold hidden sm:inline">WhatsApp</span>
+              </a>
+              <a
+                href={socialLinks.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-700 hover:text-[#2d9c4a] transition-colors group"
+              >
+                <Youtube className="w-10 h-10 p-2 border-2 border-gray-300 rounded-lg group-hover:border-[#2d9c4a] group-hover:bg-[#2d9c4a] group-hover:text-white transition-all" />
+                <span className="font-semibold hidden sm:inline">YouTube</span>
               </a>
             </div>
           </div>

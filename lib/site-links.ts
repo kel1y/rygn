@@ -10,4 +10,5 @@ export const socialLinks = {
   x: 'https://x.com/Rwandan_YGN',
   instagram: 'https://www.instagram.com/rwandan_ygn/',
   whatsapp: 'https://whatsapp.com/channel/0029Vb7QV2dKbYMFF7Zyej3h',
+  youtube: 'https://www.youtube.com/@RwandaYGN',
 } as const;

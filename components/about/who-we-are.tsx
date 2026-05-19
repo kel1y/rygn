@@ -11,7 +11,7 @@ export function WhoWeAre() {
               WHO WE ARE
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              The Rwandan Youth Generation in Nuclear (RYGN) is a vibrant non-governmental organization committed to promoting the peaceful use of nuclear science and technology in Rwanda and across Africa.
+              The Rwandan Young Generation in Nuclear (RYGN) is a vibrant non-governmental organization committed to promoting the peaceful use of nuclear science and technology in Rwanda and across Africa.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
               We inspire, empower and connect young people to opportunities in nuclear science and related fields. Our mission is to lead the way in promoting nuclear literacy and developing a skilled workforce in Rwanda&apos;s nuclear sector.

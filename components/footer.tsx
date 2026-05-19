@@ -1,5 +1,11 @@
 import Link from 'next/link';
-import { LinkedinIcon, TwitterIcon, InstagramIcon, MessageCircle } from 'lucide-react';
+import {
+  LinkedinIcon,
+  TwitterIcon,
+  InstagramIcon,
+  MessageCircle,
+  Youtube,
+} from 'lucide-react';
 import { contact, socialLinks } from '@/lib/site-links';
 
 export function Footer() {
@@ -96,7 +102,7 @@ export function Footer() {
           {/* Follow Us */}
           <div>
             <h3 className="font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href={socialLinks.linkedin}
                 target="_blank"
@@ -132,6 +138,15 @@ export function Footer() {
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-6 h-6" />
+              </a>
+              <a
+                href={socialLinks.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-6 h-6" />
               </a>
             </div>
           </div>
