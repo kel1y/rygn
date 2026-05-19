@@ -12,12 +12,9 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/programs', label: 'Programs' },
-    { href: '/', label: 'Our Impact' },
-    { href: '/', label: 'Blog' },
     { href: '/team', label: 'Team' },
     { href: '/gallery', label: 'Gallery' },
-    { href: '/', label: 'Resources' },
-    { href: '/', label: 'Contact' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -39,7 +36,7 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 className="text-gray-700 hover:text-[#2d9c4a] font-medium transition-colors text-sm"
               >
@@ -77,7 +74,7 @@ export function Navigation() {
           <div className="lg:hidden pb-4 space-y-2">
             {navItems.map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition-colors"
                 onClick={() => setIsOpen(false)}

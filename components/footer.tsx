@@ -12,7 +12,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1a3a52] text-white py-12">
+    <footer id="contact" className="bg-[#1a3a52] text-white py-12 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -72,7 +72,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="#contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
