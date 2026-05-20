@@ -38,7 +38,7 @@ export function HeroSection() {
           {/* Right Image */}
           <div className="relative h-96 lg:h-full rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/images/hero.jpg"
+              src="/images/hero.png"
               alt="Young professionals working on nuclear science"
               fill
               className="object-cover"
