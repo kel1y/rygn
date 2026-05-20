@@ -11,20 +11,20 @@ export function WhoWeAre() {
               WHO WE ARE
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              The Rwandan Young Generation in Nuclear (RYGN) is a vibrant non-governmental organization committed to promoting the peaceful use of nuclear science and technology in Rwanda and across Africa.
+            The Rwandan Young Generation in Nuclear (RYGN) is a vibrant non-governmental organization committed to promoting the peaceful use of nuclear science and technology in Rwanda and across Africa. As part of the African Young Generation in Nuclear, and under the global network of the International Youth Nuclear Congress, we connect Rwanda’s young professionals to the international nuclear community.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              We inspire, empower and connect young people to opportunities in nuclear science and related fields. Our mission is to lead the way in promoting nuclear literacy and developing a skilled workforce in Rwanda&apos;s nuclear sector.
+            We inspire, empower and connect young people to opportunities in nuclear science and related fields. Our mission is to lead the way in promoting nuclear literacy and developing a skilled workforce in Rwanda's nuclear sector.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Through our programs and initiatives, we foster leadership, innovation, and sustainable development for a better tomorrow.
+            Through our programs and initiatives, we foster leadership, innovation, and sustainable development for a better tomorrow.
             </p>
           </div>
 
           {/* Right Image */}
           <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/images/team-group.jpg"
+              src="/images/team-group.png"
               alt="RYGN Team"
               fill
               className="object-cover"
