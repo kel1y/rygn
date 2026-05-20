@@ -45,13 +45,19 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Join Us Button and Mobile Menu Button */}
-          <div className="flex items-center gap-4">
+          {/* Join Us & Donate Buttons and Mobile Menu Button */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="/get-involved"
-              className="hidden sm:inline-block bg-[#1a3a52] text-white px-6 py-2 rounded hover:bg-[#0f2847] transition-colors font-medium text-sm"
+              className="hidden sm:inline-block bg-[#1a3a52] text-white px-5 py-2 rounded hover:bg-[#0f2847] transition-colors font-medium text-sm"
             >
               Join Us
+            </Link>
+            <Link
+              href="/donate"
+              className="hidden sm:inline-block bg-[#2d9c4a] text-white px-5 py-2 rounded hover:bg-[#239a41] transition-colors font-medium text-sm"
+            >
+              Donate
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -82,13 +88,22 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/get-involved"
-              className="block bg-[#1a3a52] text-white px-4 py-2 rounded hover:bg-[#0f2847] transition-colors font-medium text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              Join Us
-            </Link>
+            <div className="grid grid-cols-2 gap-2 px-4 pt-2">
+              <Link
+                href="/get-involved"
+                className="block bg-[#1a3a52] text-white px-4 py-2 rounded hover:bg-[#0f2847] transition-colors font-medium text-center text-sm"
+                onClick={() => setIsOpen(false)}
+              >
+                Join Us
+              </Link>
+              <Link
+                href="/donate"
+                className="block bg-[#2d9c4a] text-white px-4 py-2 rounded hover:bg-[#239a41] transition-colors font-medium text-center text-sm"
+                onClick={() => setIsOpen(false)}
+              >
+                Donate
+              </Link>
+            </div>
           </div>
         )}
       </div>
