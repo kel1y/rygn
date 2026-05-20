@@ -1,5 +1,5 @@
 export const contact = {
-  email: 'rwandan.ygn@gamail.com',
+  email: 'rwandan.ygn@gmail.com',
   phone: '+250781568385',
   phoneDisplay: '+250 781 568 385',
 } as const;
