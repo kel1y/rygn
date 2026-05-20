@@ -20,7 +20,7 @@ export const newsStories: NewsStory[] = [
     category: 'Summit',
     excerpt:
       'RYGN brought young leaders together under the theme “Empowering Youth to Lead Rwanda’s Nuclear Future,” highlighting youth leadership in sustainable energy and peaceful nuclear applications.',
-    image: '/images/gallery/Picture1.jpg',
+    image: '/images/gallery/Picture1.png',
     paragraphs: [
       'RYGN successfully organized the Rwanda Youth Nuclear Summit 2025 under the theme “Empowering Youth to Lead Rwanda’s Nuclear Future.” The summit emphasized the critical role of youth in achieving Rwanda’s long-term energy goals, including expanding electricity generation sustainably.',
       'Key discussions highlighted Rwanda’s progress in the peaceful applications of nuclear science—such as healthcare, agriculture, and environmental management—and the planned establishment of a Centre for Nuclear Science and Technology.',
@@ -34,7 +34,7 @@ export const newsStories: NewsStory[] = [
     category: 'Community',
     excerpt:
       'RYGN members meet monthly through Atoms Connect to share knowledge, strengthen collaboration, and build a vibrant community of young nuclear professionals.',
-    image: '/images/gallery/Picture2.jpg',
+    image: '/images/gallery/Picture4.png',
     paragraphs: [
       'RYGN continues to actively participate in Atoms Connect, a monthly gathering that strengthens member engagement, knowledge sharing, and community building among young nuclear professionals and enthusiasts.',
       'These sessions create space for members to exchange ideas, learn from one another, and stay connected with developments across Rwanda’s nuclear ecosystem—from education and research to policy and industry.',
@@ -77,7 +77,7 @@ export const newsStories: NewsStory[] = [
     category: 'Partnership',
     excerpt:
       'RYGN joined a Rwanda Women in Nuclear meeting with Aline Des Cloizeaux, advancing collaboration and international engagement for youth inclusion in nuclear development.',
-    image: '/images/gallery/Picture4.jpg',
+    image: '/images/gallery/Picture2.png',
     paragraphs: [
       'On 3 March 2026, RYGN participated in a Rwanda Women in Nuclear meeting with Aline Des Cloizeaux, strengthening collaboration and international engagement in advancing nuclear development and youth inclusion.',
       'The engagement underscored the importance of connecting Rwandan youth with regional and global networks, ensuring that young professionals have a voice in conversations shaping the future of nuclear science and technology on the continent.',
