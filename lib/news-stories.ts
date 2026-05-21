@@ -22,10 +22,12 @@ export const newsStories: NewsStory[] = [
       'RYGN brought young leaders together under the theme “Empowering Youth to Lead Rwanda’s Nuclear Future,” highlighting youth leadership in sustainable energy and peaceful nuclear applications.',
     image: '/images/gallery/Picture1.png',
     paragraphs: [
-      'RYGN successfully organized the Rwanda Youth Nuclear Summit 2025 under the theme “Empowering Youth to Lead Rwanda’s Nuclear Future.” The summit emphasized the critical role of youth in achieving Rwanda’s long-term energy goals, including expanding electricity generation sustainably.',
+      'RYGN successfully organized the Rwanda Youth Nuclear Summit 2025, in collaboration with NiCE Club, University of Rwanda and Rwanda Atomic Energy Board, under the theme “Empowering Youth to Lead Rwanda’s Nuclear Future.” The summit emphasized the critical role of youth in achieving Rwanda’s long-term energy goals, including expanding electricity generation sustainably.',
+
       'Key discussions highlighted Rwanda’s progress in the peaceful applications of nuclear science—such as healthcare, agriculture, and environmental management—and the planned establishment of a Centre for Nuclear Science and Technology.',
+
       'The International Atomic Energy Agency (IAEA) reaffirmed its support for youth capacity building through training, fellowships, and technical cooperation, recognizing the importance of the Young Generation in Nuclear (YGN) in developing future expertise.',
-    ],
+],
   },
   {
     slug: 'atoms-connect-engagement',
