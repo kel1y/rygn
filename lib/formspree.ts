@@ -4,6 +4,9 @@ export const FORM_RECIPIENT_EMAIL = 'irakozekelly41@gmail.com';
 export function getFormspreeEndpoint(): string | null {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim();
   if (!formId) return null;
+  if (formId.startsWith('http://') || formId.startsWith('https://')) {
+    return formId;
+  }
   return `https://formspree.io/f/${formId}`;
 }
 

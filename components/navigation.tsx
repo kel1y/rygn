@@ -22,13 +22,17 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#1a3a52] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">RY</span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-12 h-12 bg-white rounded-xl flex items-center justify-center overflow-hidden border border-gray-100 p-0.5">
+              <img
+                src="/images/logo.PNG"
+                alt="RYGN Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-[#1a3a52] text-lg">RYGN</div>
-              <div className="text-xs text-gray-500">OPERATION IN NUCLEAR</div>
+              <div className="font-bold text-[#1a3a52] text-lg leading-tight">RYGN</div>
+              <div className="text-[10px] text-gray-500 font-semibold tracking-wider uppercase">OPERATION IN NUCLEAR</div>
             </div>
           </Link>
 

@@ -18,13 +18,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo Column */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-[#1a3a52] font-bold text-sm">RY</span>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-12 h-12 bg-white rounded-xl flex items-center justify-center overflow-hidden p-0.5">
+                <img
+                  src="/images/logo.PNG"
+                  alt="RYGN Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <div className="font-bold text-lg">RYGN</div>
-                <div className="text-xs text-gray-300">OPERATION IN NUCLEAR</div>
+                <div className="font-bold text-lg leading-tight">RYGN</div>
+                <div className="text-[10px] text-gray-300 font-semibold tracking-wider uppercase">OPERATION IN NUCLEAR</div>
               </div>
             </div>
             <p className="text-gray-300 text-sm">
