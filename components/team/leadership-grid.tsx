@@ -17,7 +17,7 @@ export function LeadershipGrid() {
     {
       name: 'Abraham Rutunda',
       title: 'General Secretary',
-      image: '/images/Rutu.png',
+      image: '/images/rutunda.jpg',
       linkedin: 'https://www.linkedin.com/in/abraham-rutunda-b32342253/',
     },
     {
