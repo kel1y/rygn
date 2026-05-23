@@ -14,6 +14,7 @@ import {
   Star, 
   Crown, 
   Gem, 
+  Sparkles,
   Check
 } from 'lucide-react';
 import { submitToFormspree } from '@/lib/formspree';
