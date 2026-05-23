@@ -21,7 +21,7 @@ export function LeadershipGrid() {
       linkedin: 'https://www.linkedin.com/in/abraham-rutunda-b32342253/',
     },
     {
-      name: 'Manzi Clement',
+      name: 'Manzi      Clement',
       title: 'Senior Treasurer',
       image: '/images/clement.jpg',
       linkedin: 'https://www.linkedin.com/in/manzi-clement/',
