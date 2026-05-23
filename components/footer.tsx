@@ -19,7 +19,7 @@ export function Footer() {
           {/* Logo Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="relative w-12 h-12 bg-white rounded-xl flex items-center justify-center overflow-hidden p-0.5">
+              <div className="relative w-16 h-16 bg-white rounded-2xl flex items-center justify-center overflow-hidden p-1">
                 <img
                   src="/images/logo.PNG"
                   alt="RYGN Logo"
