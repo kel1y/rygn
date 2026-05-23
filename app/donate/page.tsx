@@ -14,7 +14,6 @@ import {
   Star, 
   Crown, 
   Gem, 
-  Sparkles,
   Check
 } from 'lucide-react';
 import { submitToFormspree } from '@/lib/formspree';
@@ -120,10 +119,6 @@ export default function DonatePage() {
           
           {/* Header Introduction */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#2d9c4a]/10 text-[#2d9c4a] mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              Empower Rwanda&apos;s Next Generation
-            </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#1a3a52] tracking-tight mb-4">
               Partner with RYGN
             </h2>
