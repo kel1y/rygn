@@ -50,7 +50,7 @@ export const newsStories: NewsStory[] = [
     category: 'Campaign',
     excerpt:
       'A nationwide campaign celebrating women and girls in nuclear science, featuring advocacy videos, digital outreach, and a flagship event at the University of Rwanda.',
-    image: '/images/ange.jpeg',
+    image: '/images/Application.jpeg',
     paragraphs: [
       'RYGN conducted a nationwide campaign to celebrate and promote the role of women and girls in nuclear science, aligning with global efforts to expand inclusion and representation in STEM.',
       'The campaign reached university and high school students, academic staff, STEM professionals, policymakers, and the wider public—encouraging more young women to see nuclear science as a meaningful and achievable career path.',
